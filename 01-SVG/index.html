@@ -34,7 +34,18 @@
 
     <h2>Path</h2>
     <svg>
-      <path d="M 100 50 H 50 V 100 H 100 M 110 100 V 50 M 120 100 V 50 M 120 60 H 165 V 100 M 175 100 V 50 H 225 V 100 H 175 M 225 100 V 0" fill="none" stroke="black" stroke-width="5" />
+      <!-- lettre C -->
+      <path d="M 100 50 H 50 V 100 H 100" fill="none" stroke="black" stroke-width="5" id="theMotionPath"/>
+      <path d="M 110 100 V 50 M 120 100 V 50 M 120 60 H 165 V 100 M 175 100 V 50 H 225 V 100 H 175 M 225 100 V 0" fill="none" stroke="black" stroke-width="5" />
+
+    <!-- Cercle rouge qui sera déplacé le long du chemin. -->
+    <circle cx="" cy="" r="5" fill="red">
+
+      <!-- Définit l'animation -->
+      <animateMotion dur="6s" repeatCount="indefinite">
+        <mpath xlink:href="#theMotionPath"/>
+      </animateMotion>
+    </circle>
     </svg>
 
     <h1>Animer des formes</h1>
@@ -44,7 +55,6 @@
     <h2>On hover</h2>
 
     <h2>Prenez la première lettre de votre prénom que vous avez créée ci-dessus. Faite bouger une forme de votre choix le long de la lettre</h2>
-
 
   </body>
 </html>
